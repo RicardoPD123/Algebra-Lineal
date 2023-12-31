@@ -1,0 +1,49 @@
+%Ejercicio 7%
+%Calcula la raíz séptima de z%
+m=msgbox('Calcula la raíz séptima del complejo z=9*75°)','Ejercicio 7');
+
+%valores%
+m2='Valores a tomar en cuenta';
+z=9*(cos(pi*5/12)+1i*sin(pi*5/12))
+arg=angle(z)
+r=abs(z)
+n=7
+
+%Cálculo de resultados%
+m3='Cálculos';
+k=0;
+z0=r^(1/n)*exp((arg+2*k*pi)/(n)*1i)
+
+k=1;
+z1=r^(1/n)*exp((arg+2*k*pi)/(n)*1i)
+
+k=2;
+z2=r^(1/n)*exp((arg+2*k*pi)/(n)*1i)
+
+k=3;
+z3=r^(1/n)*exp((arg+2*k*pi)/(n)*1i)
+
+k=4;
+z4=r^(1/n)*exp((arg+2*k*pi)/(n)*1i)
+
+k=5;
+z5=r^(1/n)*exp((arg+2*k*pi)/(n)*1i)
+
+k=6;
+z6=r^(1/n)*exp((arg+2*k*pi)/(n)*1i)
+
+%Comprobación%
+Cz0=z0^7
+Cz1=z1^7
+Cz2=z2^7
+Cz3=z3^7
+Cz4=z4^7
+Cz5=z5^7
+Cz6=z6^7
+
+%Graficación%
+m4='Gráfica';
+compass([z0,z1,z2,z3,z4,z5,z6])
+
+hold on;
+plot([z0,z1,z2,z3,z4,z5,z6,z0])
